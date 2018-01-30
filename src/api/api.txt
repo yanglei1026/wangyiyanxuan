@@ -1,0 +1,56 @@
+1. /shiwu/sliders
+   get请求
+
+2. /fenlei/type
+   get请求
+
+  成功后返回
+{
+   type:"cloth",
+   hasMore:"",
+   list:[
+  {
+   id:1,
+   conImg:"http://yanxuan.nosdn.127.net/af5c5433fd3ecd41be4f0009811848e2.png?imageViewquality=65&thumbnail=330x330",
+   conDetail:"澳洲美利奴羊毛，细腻温暖伴你过一整个冬天",
+   tips01:"应季特惠",
+   tips02:"加价购",
+   tips03:"满折",
+   info:"100%羊毛 男式经典美利奴V领羊毛衫",
+   price:"169"
+  },
+  ]
+}
+--------------------------------
+失败后返回 :
+err:1, hasMore:"false"
+--------------------------------
+
+2. /home/sliders
+   get请求
+
+成功后返回 数组
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports=[
+{type:"cloth",
+topimg:"https://github.com/monkeyseven/react_higo.gitm",
+titlename:"毛衫",
+titledis:"温暖柔软，品质之选",
+}
+]

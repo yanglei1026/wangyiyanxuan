@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 export default class Detail extends  Component{
   render(){
-      return <div></div>
+      console.log(this.props);
+      return (<div>111</div>)
   }
 }
