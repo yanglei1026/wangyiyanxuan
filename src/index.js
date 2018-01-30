@@ -17,7 +17,8 @@ ReactDOM.render(
         <HashRouter>
             <App>
                 <Switch>
-                    <Route path="/home" exact={true} component={Home}/>
+                    <Route path="/" exact component={Home}/>
+                    <Route path="/home" component={Home}/>
                     <Route path="/shiwu" component={Shiwu}/>
                     <Route path="/fenlei" component={Fenlei}/>
                     <Route path="/cart" component={Cart}/>

@@ -17,14 +17,21 @@ app.use(function (req, res, next) {
     else  next();
 });
 
+let home_sliders = require("./mock/home-slider");
+
 let axios = require("axios");
 app.get('/sliders', function (request, response) {
     axios.get('http://html5train.com/orgHomePage.do?action=getOrgHomePageInfo&layoutType=default&organizationId=510&_=1516694175474').then(function (res) {
         response.json(res.data.moduleDTOList.list[0].moduleMap.map.pictureDTOList.list);
-    })
+    });
 });
 
+app.get('/home/sliders', function (request, response) {
+    response.json(home_sliders);
+});
 
-app.get("/",function (req, res) {
+app.get("/fenlei/:type" ,function (req,res) {
+    let {type} = req.params;
 
+    res.send("1111")
 });

@@ -1,8 +1,15 @@
 import React, {Component} from "react";
-import logo from "../../../resource/images/logo.png"
+import logo from "../../../resource/images/logo.png";
+import {Carousel} from "antd-mobile"
 
 
 export default class HomeHeader extends Component {
+    constructor(){
+        super();
+    }
+    componentDidMount(){}
+
+
     render() {
         return (
             <div className="home-header">
