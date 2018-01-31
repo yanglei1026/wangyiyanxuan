@@ -6,6 +6,14 @@ app.listen(3000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+// app.use(session({
+//     resave: true, // 每次重新保存
+//     secret: "yang",
+//     saveUninitialized: true // 页面一刷新   req.session 进行设置内容了  req.session.user = 123
+// }));
+
+// 跨域请求
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:9000");
     res.header("Access-Control-Allow-Credentials", true);
@@ -15,6 +23,7 @@ app.use(function (req, res, next) {
     if (req.method == "OPTIONS") res.sendStatus(200);/*让options请求快速返回*/
     else  next();
 });
+
 
 let home_sliders = require("./mock/home-slider");
 
