@@ -10,17 +10,20 @@ import Cart from "./containers/Cart/Cart";
 import {Provider} from "react-redux"
 import store from "./redux/index";
 import "./util/reset.less";
+import Detail from "./containers/Detail/Detail";
 
 ReactDOM.render(
     <Provider store={store}>
         <HashRouter>
             <App>
                 <Switch>
-                    <Route path="/home" exact={true} component={Home}/>
+                    <Route path="/" exact component={Home}/>
+                    <Route path="/home" component={Home}/>
                     <Route path="/shiwu" component={Shiwu}/>
                     <Route path="/fenlei" component={Fenlei}/>
                     <Route path="/cart" component={Cart}/>
                     <Route path="/geren" component={Geren}/>
+                    <Route path="/detail" component={Detail}/>
                 </Switch>
             </App>
         </HashRouter>
