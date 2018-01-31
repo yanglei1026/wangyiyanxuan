@@ -49,6 +49,7 @@
     "redux-thunk": "^2.2.0",
     "swipe-js-iso": "^2.0.4"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "pengchong <996582421@qq.com>",
+  "license": "ISC",
+  "repository": "https://github.com/yanglei1026/wangyiyanxuan.git"
 }
