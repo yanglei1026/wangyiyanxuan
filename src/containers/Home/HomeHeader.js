@@ -15,7 +15,7 @@ export default class HomeHeader extends Component {
             <div className="home-header">
                 <div className="home-header-search">
                     <img src={logo}/>
-                   <div className="search">
+                    <div className="search">
                         <i className="iconfont icon-fangdajing"></i><span>搜索商品, 共9930款好物</span>
                     </div>
                 </div>

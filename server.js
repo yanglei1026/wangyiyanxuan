@@ -20,18 +20,28 @@ app.use(function (req, res, next) {
 let home_sliders = require("./mock/home-slider");
 
 let axios = require("axios");
-app.get('/sliders', function (request, response) {
-    axios.get('http://html5train.com/orgHomePage.do?action=getOrgHomePageInfo&layoutType=default&organizationId=510&_=1516694175474').then(function (res) {
-        response.json(res.data.moduleDTOList.list[0].moduleMap.map.pictureDTOList.list);
-    });
-});
+
+// app.get('/sliders', function (request, response) {
+//     axios.get('http://html5train.com/orgHomePage.do?action=getOrgHomePageInfo&layoutType=default&organizationId=510&_=1516694175474').then(function (res) {
+//         response.json(res.data.moduleDTOList.list[0].moduleMap.map.pictureDTOList.list);
+//     });
+// });
 
 app.get('/home/sliders', function (request, response) {
     response.json(home_sliders);
 });
 
+let product_data = require("./mock/home");
+// product_data  是mock数据, 数据类型是个 对象
+
 app.get("/fenlei/:type" ,function (req,res) {
     let {type} = req.params;
-
-    res.send("1111")
+    let data = {};
+    for(let key in product_data){
+        if(product_data[key].category == type ){
+            data = product_data[key];
+        }
+    }
+    console.log(data);
+    res.send({err:0, data, msg:"数据请求成功"});
 });
