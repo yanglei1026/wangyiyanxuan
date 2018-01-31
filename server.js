@@ -2,7 +2,6 @@ let express = require("express");
 let app = express();
 let bodyParser = require("body-parser");
 app.listen(3000);
-// express.static(root, [options])
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,15 +32,16 @@ app.get('/home/sliders', function (request, response) {
 
 let product_data = require("./mock/home");
 // product_data  是mock数据, 数据类型是个 对象
+let fenlei = require("./mock/fenlei");
 
 app.get("/fenlei/:type" ,function (req,res) {
     let {type} = req.params;
     let data = {};
-    for(let key in product_data){
-        if(product_data[key].category == type ){
-            data = product_data[key];
+    for(let key in fenlei){
+        if(fenlei[key].category == type ){
+            data = fenlei[key];
         }
     }
-    console.log(data);
-    res.send({err:0, data, msg:"数据请求成功"});
+    if(data["category"]===undefined) res.send({err:1, hasMore:false, msg:"请求失败"});
+    res.send({err:0, data, hasMore:true,msg:"数据请求成功"});
 });
