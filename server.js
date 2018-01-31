@@ -2,11 +2,18 @@ let express = require("express");
 let app = express();
 let bodyParser = require("body-parser");
 app.listen(3000);
-// express.static(root, [options])
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+// app.use(session({
+//     resave: true, // 每次重新保存
+//     secret: "yang",
+//     saveUninitialized: true // 页面一刷新   req.session 进行设置内容了  req.session.user = 123
+// }));
+
+// 跨域请求
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:9000");
     res.header("Access-Control-Allow-Credentials", true);
@@ -17,21 +24,33 @@ app.use(function (req, res, next) {
     else  next();
 });
 
+
 let home_sliders = require("./mock/home-slider");
 
 let axios = require("axios");
-app.get('/sliders', function (request, response) {
-    axios.get('http://html5train.com/orgHomePage.do?action=getOrgHomePageInfo&layoutType=default&organizationId=510&_=1516694175474').then(function (res) {
-        response.json(res.data.moduleDTOList.list[0].moduleMap.map.pictureDTOList.list);
-    });
-});
+
+// app.get('/sliders', function (request, response) {
+//     axios.get('http://html5train.com/orgHomePage.do?action=getOrgHomePageInfo&layoutType=default&organizationId=510&_=1516694175474').then(function (res) {
+//         response.json(res.data.moduleDTOList.list[0].moduleMap.map.pictureDTOList.list);
+//     });
+// });
 
 app.get('/home/sliders', function (request, response) {
     response.json(home_sliders);
 });
 
+let product_data = require("./mock/home");
+// product_data  是mock数据, 数据类型是个 对象
+let fenlei = require("./mock/fenlei");
+
 app.get("/fenlei/:type" ,function (req,res) {
     let {type} = req.params;
-
-    res.send("1111")
+    let data = {};
+    for(let key in fenlei){
+        if(fenlei[key].category == type ){
+            data = fenlei[key];
+        }
+    }
+    if(data["category"]===undefined) res.send({err:1, hasMore:false, msg:"请求失败"});
+    res.send({err:0, data, hasMore:true,msg:"数据请求成功"});
 });

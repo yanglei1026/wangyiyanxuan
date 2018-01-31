@@ -1,8 +1,25 @@
-1. /shiwu/sliders
-   get请求
+url:"http://localhost:3000"  +  下面的接口
 
-2. /fenlei/type
+首页接口:
+1. http://localhost:3000/home/${type}      get 请求   type 可能是 tuijian/
+   成功后返回一个对象 { hasMore:true, data:[数据] , err:0}
+   失败后返回 {err:1, msg:"请求失败", hasMore:false}
+   无参数
+
+实物页接口
+2. http:localhost:3000/shiwu/sliders
    get请求
+   无参数
+
+    成功后返回 :  {hasMore:true, data:数据, msg:"请求成功" ,err:0}
+    失败后返回 :  {hasMore:false, msg:"请求失败", err:1}
+
+2. http:localhost:3000/fenlei/${type}
+   get请求
+   无参数
+       成功后返回 :  {hasMore:true, data:数据, msg:"请求成功" ,err:0}
+       失败后返回 :  {hasMore:false, msg:"请求失败", err:1}
+
 
   成功后返回
 {
@@ -29,9 +46,12 @@ err:1, hasMore:"false"
 2. /home/sliders
    get请求
 
+3/  获取某一条数据
+
+
 成功后返回 数组
 
-
+3. /home/type
 
 
 
