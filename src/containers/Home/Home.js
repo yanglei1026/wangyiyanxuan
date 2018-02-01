@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import HomeHeader from "./HomeHeader";
 import "./home.less";
 import {ajax} from "../../util/util";
+import {toRegister} from "../../api/login"
 
 export default class Home extends Component {
 
@@ -11,6 +12,8 @@ export default class Home extends Component {
     }
 
     componentDidMount(){
+        toRegister("yang","123456");
+
         ajax({
             url:"http://localhost:3000/home/sliders",method:"get"
         }).then((res)=>{

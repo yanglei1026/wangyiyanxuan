@@ -11,6 +11,7 @@ import {Provider} from "react-redux"
 import store from "./redux/index";
 import "./util/reset.less";
 import Detail from "./containers/Detail/Detail";
+import Item from "./components/Item/Item";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -24,6 +25,7 @@ ReactDOM.render(
                     <Route path="/cart" component={Cart}/>
                     <Route path="/geren" component={Geren}/>
                     <Route path="/detail" component={Detail}/>
+                    <Route path="/item" component={Item}/>
                 </Switch>
             </App>
         </HashRouter>
