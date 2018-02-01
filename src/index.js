@@ -11,6 +11,9 @@ import {Provider} from "react-redux"
 import store from "./redux/index";
 import "./util/reset.less";
 import Detail from "./containers/Detail/Detail";
+import Search from "./containers/Detail/Search";
+import Detail_server from "./containers/Detail/Detail_server";
+import Detail_choose from "./containers/Detail/Detail_choose";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -23,6 +26,9 @@ ReactDOM.render(
                     <Route path="/cart" component={Cart}/>
                     <Route path="/geren" component={Geren}/>
                     <Route path="/detail" component={Detail}/>
+                    <Route path="/search" component={Search}/>
+                    <Route path="/detail_server" component={Detail_server}/>
+                    <Route path="/detail_choose" component={Detail_choose}/>
                 </Switch>
             </App>
         </HashRouter>
