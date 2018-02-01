@@ -11,6 +11,10 @@ import {Provider} from "react-redux"
 import store from "./redux/index";
 import "./util/reset.less";
 import Detail from "./containers/Detail/Detail";
+import Address from "./containers/Address/Address";
+import Order from "./containers/Order/Order";
+import Invoice from "./containers/Invoice/Invoice";
+import Help from "./containers/Help/Help";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -24,6 +28,11 @@ ReactDOM.render(
                     <Route path="/cart" component={Cart}/>
                     <Route path="/geren" component={Geren}/>
                     <Route path="/detail" component={Detail}/>
+                    <Route path="/address" component={Address}/>
+                    <Route path="/order" component={Order}/>
+                    <Route path="/invoice" component={Invoice}/>
+                    <Route path="/help" component={Help}/>
+
                 </Switch>
             </App>
         </HashRouter>

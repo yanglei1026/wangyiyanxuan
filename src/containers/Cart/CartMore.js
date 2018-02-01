@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 
 export default class CartMore extends Component {
     constructor() {
@@ -40,7 +41,7 @@ export default class CartMore extends Component {
                         <i></i>
                         <span> 已选()</span>
                         <span>¥{this.state.num}</span>
-                        <button>下单</button>
+                        <Link to="/address"><button>下单</button></Link>
                     </div>
                 </div>
             </div>
