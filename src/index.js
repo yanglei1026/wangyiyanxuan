@@ -15,6 +15,7 @@ import Address from "./containers/Address/Address";
 import Order from "./containers/Order/Order";
 import Invoice from "./containers/Invoice/Invoice";
 import Help from "./containers/Help/Help";
+import Item from "./components/Item/Item";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -32,7 +33,7 @@ ReactDOM.render(
                     <Route path="/order" component={Order}/>
                     <Route path="/invoice" component={Invoice}/>
                     <Route path="/help" component={Help}/>
-
+                    <Route path="/item" component={Item}/>
                 </Switch>
             </App>
         </HashRouter>

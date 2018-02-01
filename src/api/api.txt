@@ -1,24 +1,35 @@
-url:"http://localhost:3000"  +  下面的接口
+下面的接口
 
 首页接口:
-1. http://localhost:3000/home/${type}      get 请求   type 可能是 tuijian/
+1. /home/${type}      get 请求   type 可能是 tuijian/
    成功后返回一个对象 { hasMore:true, data:[数据] , err:0}
    失败后返回 {err:1, msg:"请求失败", hasMore:false}
    无参数
 
-实物页接口
-2. http:localhost:3000/shiwu/sliders
+识物页接口
+1. /shiwu/sliders
    get请求
    无参数
 
     成功后返回 :  {hasMore:true, data:数据, msg:"请求成功" ,err:0}
     失败后返回 :  {hasMore:false, msg:"请求失败", err:1}
 
-2. http:localhost:3000/fenlei/${type}
+
+分类页接口
+1. /fenlei/${type}
    get请求
    无参数
        成功后返回 :  {hasMore:true, data:数据, msg:"请求成功" ,err:0}
        失败后返回 :  {hasMore:false, msg:"请求失败", err:1}
+
+
+// 登录注册页接口
+1. /register
+  post请求
+  需要参数 {username,password}
+  成功后返回: {err:0, msg:"恭喜,注册成功"}
+  失败后返回: {err:1, msg:"注册失败,请更改用户名重新注册"}
+
 
 
   成功后返回
