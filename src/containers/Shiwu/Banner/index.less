@@ -1,0 +1,87 @@
+.banner{
+  .swiper-container {
+    padding-top: 1rem;
+    padding-bottom: 54/28rem;
+    background: #fff;
+  }
+
+  .swiper-wrapper {
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 680/28rem;
+      height: 370/28rem;
+      border-radius: .3rem;
+      overflow: hidden;
+      margin-right: 1.5rem;
+      margin-left: 1rem;
+      .cover {
+        width: 495/28rem;
+        height: 495/28rem;
+        border-radius: 3.6rem;
+        position: absolute;
+        top: -115/28rem;
+        left: -240/28rem;
+        opacity: .9;
+        transform: rotate(-40deg);
+        z-index: -1;
+      }
+    }
+
+    .swiper-slide:nth-child(1) {
+      background-image: url("shiwu_banner_01.jpg");
+      .cover {
+        background-color: #d2c1a7;
+      }
+    }
+    .swiper-slide:nth-child(2) {
+      background-image: url("shiwu_banner_02.jpg");
+      .cover {
+        background-color: #b2bc81;
+      }
+    }
+    .swiper-slide:nth-child(3) {
+      background-image: url("shiwu_banner_03.jpg");
+      .cover {
+        background-color: #afc1cd;
+      }
+    }
+    .swiper-slide:nth-child(4) {
+      background-image: url("shiwu_banner_04.jpg");
+      .cover {
+        background-color: #7d797a;
+      }
+    }
+
+
+  }
+
+  .content{
+    width: 254.67/28rem;
+    height: 161.44/28rem;
+    position: absolute;
+    left: 29/28rem;
+    top: 50/28rem;
+
+    .line-title{
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+
+      line-height: 1.2;
+      margin-bottom: 20/28rem;
+      font-size: 17/28rem;
+      color:#fff;
+    }
+    .title{
+      color: #fff;
+      font-size: 35.25/28rem;
+      line-height: 1.2;
+      text-align: left;
+      margin-bottom: 11/28rem;
+      font-weight: 700
+    }
+  }
+
+
+}

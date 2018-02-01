@@ -1,11 +1,11 @@
-let ajax = ({ method='', url='', async=true, data={}, headers={} }) => {
+let ajax = ({method = '', url = '', async = true, data = {}, headers = {}}) => {
     let xhr = new XMLHttpRequest();
     xhr.open(method, url, async);
 
-    for ( let key in headers ) {
+    for (let key in headers) {
         xhr.setRequestHeader(key, headers[key]);
     }
-    if ( method.toUpperCase() === 'POST' ) {
+    if (method.toUpperCase() === 'POST') {
         xhr.setRequestHeader('content-type', 'application/json');
     }
 
@@ -29,7 +29,7 @@ let ajax = ({ method='', url='', async=true, data={}, headers={} }) => {
     });
 };
 
-export { ajax }
+export {ajax}
 export default {
     ajax
 }

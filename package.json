@@ -36,6 +36,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "flipsnap": "^0.6.3",
     "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -47,7 +48,8 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
-    "swipe-js-iso": "^2.0.4"
+    "swipe-js-iso": "^2.0.4",
+    "swiper": "^4.1.0"
   },
   "author": "",
   "license": "ISC"

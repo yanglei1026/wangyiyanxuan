@@ -1,0 +1,84 @@
+.channels {
+  background: #fff;
+  width: 100%;
+  padding: 48/28rem 30/28rem 5/28rem;
+  height: 270/28rem;
+  margin-bottom: 20/28rem;
+
+  .swiper-container {
+    //overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+
+    .list {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      .item {
+        position: relative;
+        width: 180/28rem;
+        height: 180/28rem;
+        background-size: cover;
+        border-radius: .2rem;
+
+        &:nth-child(1) {
+          background-image: url("./channel01.png");
+        }
+
+        &:nth-child(2) {
+          background-image: url("./channel02.png");
+        }
+
+        &:nth-child(3) {
+          background-image: url("./channel03.png");
+        }
+
+        &:nth-child(4) {
+          background-image: url("./channel04.png");
+        }
+        &:nth-child(5) {
+          background-image: url("./channel05.png");
+        }
+        &:nth-child(6) {
+          background-image: url("./channel06.png");
+        }
+        &:nth-child(7) {
+          background-image: url("./channel07.png");
+        }
+        &:nth-child(8) {
+          background-image: url("./channel08.png");
+        }
+
+        .u-icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          color: #fff;
+          font-weight: 700;
+          width: 116/28rem;
+          height: 32/28rem;
+          background-image: url("./text-bg.png");
+          .topNum {
+            position: absolute;
+            top: 0;
+            right: 8/28rem;
+            width: 150/28rem;
+            height: 32/28rem;
+            line-height: 32/28rem;
+            text-align: right;
+          }
+        }
+
+        .title {
+          color: #333;
+          font-size: 24/28rem;
+          line-height: 1;
+          text-align: center;
+          margin-top: 200/28rem;;
+        }
+      }
+    }
+  }
+}
