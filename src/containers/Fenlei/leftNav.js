@@ -1,9 +1,22 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import './leftNav.less'
+import './leftNav.less';
+import action from  '../../redux/actions/fenlei';
+import {connect} from  'react-redux';
+@connect(state=>({...state.fenlei}),action)
 export default class LeftNav extends React.Component {
+
+    changeVal=(e)=>{
+        console.log(e.target.tagName === 'UL');
+        let tagname = e.target.tagName ;
+        if (tagname !== 'UL'){
+            let dataType = e.target.href.split("/").pop();
+            this.props.tochangdata(dataType);
+        }
+    };
+
   render(){
-    return <div className="fenleft">
+    return <div className="fenleft" onClick={this.changeVal}>
             <ul>
                 <li><NavLink to="/fenlei/tuijian">推荐区</NavLink></li>
                 <li><NavLink to="/fenlei/gexing">个性专区</NavLink></li>

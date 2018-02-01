@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        .container{
+            width:100%;
+            /*height:100%;*/
+            position:relative;
+        }
+        .header{
+            background: red;
+            height:100px;
+        }
+        .body{
+            background: green;
+            width:100%;
+            position: absolute;
+            top:100px;
+            bottom:100px;
+            left: 0;
+            /*right:0;*/
+
+        }
+        .footer{
+            background: blue;
+            width:100%;
+            height:100px;
+            position: absolute;
+            bottom:0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">1</header>
+    <section class="body">2</section>
+    <footer class="footer">3</footer>
+</div>
+</body>
+</html>
