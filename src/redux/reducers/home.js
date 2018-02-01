@@ -4,7 +4,7 @@ let initState = {
     num: 0,
     type:"tuijian",
     data:{}
-}
+};
 
 function home(state = initState, action) {
     switch (action.type) {

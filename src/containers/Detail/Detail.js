@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import "./Detail.less";
 import actions from "../../redux/actions/home";
 import {WhiteSpace,Flex,WingBlank} from "antd-mobile"
+import Item from "../../components/Item/Item";
 
 @connect(state => ({...state.home}), actions)
 export default class Detail extends Component {
@@ -27,11 +28,26 @@ export default class Detail extends Component {
                 <WingBlank>
                     <ul>
                         <Flex>
-                            <Flex.Item></Flex.Item>
-                            <Flex.Item></Flex.Item>
+                            <Flex.Item><Item/></Flex.Item>
+                            <Flex.Item><Item/></Flex.Item>
+                        </Flex>
+                        <Flex>
+                            <Flex.Item><Item/></Flex.Item>
+                            <Flex.Item><Item/></Flex.Item>
+                        </Flex>
+                        <Flex>
+                            <Flex.Item><Item/></Flex.Item>
+                            <Flex.Item><Item/></Flex.Item>
+                        </Flex>
+                        <Flex>
+                            <Flex.Item><Item/></Flex.Item>
+                            <Flex.Item><Item/></Flex.Item>
                         </Flex>
                     </ul>
                 </WingBlank>
+                <WhiteSpace size="lg"/>
+                <WhiteSpace size="lg"/>
+                <WhiteSpace size="lg"/>
             </div>
         )
     }
