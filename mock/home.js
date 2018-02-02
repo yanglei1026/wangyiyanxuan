@@ -1,4 +1,5 @@
-module.exports = {
+module.exports =
+    {
     tuijian: {
             category: "cloth",
             top_img: "http://yanxuan.nosdn.127.net/3e606a7d7290270fb88a5a8aaf205d73.jpg?quality=85&thumbnail=750x0&imageView",

@@ -1,0 +1,20 @@
+module.exports=[
+    {
+        picture:"https://yanxuan.nosdn.127.net/15103116338847978.jpg",
+        title:"无荧光的全棉用品更安心",
+        price:"35.6元起",
+        subTitle:"棉质生活，严选婴童特色系列",
+    },
+    {
+        picture:"https://mimg.127.net/hz/uploader/20171011/15077181400840286.jpg?imageView&thumbnail=500x500",
+        title:"给宝宝穿上可以吃的衣服",
+        price:"19.9元起",
+        subTitle:"真正的无化学染色，一切颜色来自天然",
+    },
+    {
+        picture:"http://yanxuan.nosdn.127.net/3940daa6ac77daeb384967acec383f59.jpg",
+        title:"每个大厨都有的万能锅",
+        price:"359元起",
+        subTitle:"珐琅铸铁锅，华美耐用",
+    }
+];

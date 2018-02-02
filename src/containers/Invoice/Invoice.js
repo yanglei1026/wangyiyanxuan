@@ -30,11 +30,11 @@ export default class Invoice extends Component {
                             <div><input type="email" className="form-control" /></div>
                         </div>
                     </div>
-                    <div className="invoice-footer">
-                        <div>
+                    <div className="invoice-tip">
+                        <div className="invoice-type">
                             更多发票类型>>
                         </div>
-                        <span>
+                        <span className="invoice-notice">
                             <span>发票须知</span>
                             <span>1.  依照税局最新开票法规，纸质普通发票和电子普通发票，开具内容均为明细</span>
                             <span>2. 开票金额为用户实际支付的金额（不含礼品卡与不支持该发票类型的商品实付金额）</span>
