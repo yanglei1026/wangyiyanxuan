@@ -18,15 +18,17 @@ export default class Invoice extends Component {
                             <li placeholder="请输入个人或姓名">个人</li>
                             <li placeholder="请输入单位名称">单位</li>
                         </ul>
-                        <input type="text" value=""/>
+                        <div><input type="text" value="" className="form-control" /></div>
                     </div>
                     <div className="invoice-info">
                         <div>
                             <div>＊收票人手机</div>
-                            <input type="mobile"/></div>
+                            <div><input type="mobile" className="form-control"/></div>
+                        </div>
                         <div>
                             <div>收票人邮箱</div>
-                            <input type="email"/></div>
+                            <div><input type="email" className="form-control" /></div>
+                        </div>
                     </div>
                     <div className="invoice-footer">
                         <div>
@@ -47,7 +49,7 @@ export default class Invoice extends Component {
                 </div>
                 <div className="invoice-check">
                     <button>取消</button>
-                    <button>保存</button>
+                    <button className="btn-right">保存</button>
                 </div>
             </div>
         )

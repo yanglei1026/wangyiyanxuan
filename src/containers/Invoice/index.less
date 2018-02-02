@@ -2,18 +2,30 @@
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
   right: 0;
-  background: #ffff;
-  padding-top: 2rem;
-  padding-left: 1rem;
-  z-index: 11;
+  bottom: 0;
+  background: #f4f4f4;
+  z-index: 10;
+  padding: 1rem 1.2rem;
   .invoice-check{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3.5rem;
     display: flex;
+    flex-direction: row;
+    z-index: 11;
+    background: #fff;
     button{
       flex: 1;
     }
+    .btn-right{
+      background: #cf0703;
+      color: #fff;
+    }
   }
+
 }
 
 

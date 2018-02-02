@@ -3,11 +3,20 @@ import "./index.less";
 import {Link} from "react-router-dom";
 
 export default class Order extends Component {
+    constructor() {
+        super();
+        this.state = {agree: true}
+    }
+
+    ChangeAgree = () => {
+        this.setState({agree: !this.state.agree})
+    }
+
     render() {
         return (
             <div className="cartOrder">
-                <div className="defaultOrder">
-                    <Link to="/order">
+                <Link to="/address">
+                    <div className="defaultOrder">
                         <div className="left">
                             <p className="uname">姓名</p>
                             <div><span>默认</span></div>
@@ -17,18 +26,32 @@ export default class Order extends Component {
                             <p className="uinfo">地址</p>
                         </div>
                         <i></i>
-                    </Link>
-
-                </div>
+                    </div>
+                </Link>
                 <div className="couponOrder">
-                    <div>暂无可用优惠券<span>0张</span><i></i></div>
-                    <p><span></span> 礼品卡:<i></i></p>
+                    <div className="invoiceOrder">暂无可用优惠券<span>0张</span><i></i></div>
+                    <div className="giftOrder">
+                        <div className="giftInner">
+                            <div className="giftText">
+                                <i className="giftBg"></i>
+                                <span className="text">
+                                <span>礼品卡: ¥</span>
+                                <span>0:00</span>
+                            </span>
+                            </div>
+                        </div>
+                        <i className="arrow"></i>
+                    </div>
                 </div>
                 <div className="totalOrder">
-                    <div>商品合计</div>
-                    <div>运费</div>
-                    <div>优惠券</div>
-                    <Link to="/invoice"><p><span></span> 我要开发票<i></i></p></Link>
+
+                    <div className="total">商品合计 <span>¥99:00</span></div>
+                    <div className="total">运费 <span>¥0:00</span></div>
+                    <div className="total">优惠券 <span>-¥0:00</span></div>
+                    <Link to="/invoice">
+                        <div><i className="giftBg"></i><p>我要开发票</p><i className="arrow"></i>
+                        </div>
+                    </Link>
                 </div>
                 <div className="listOrder">
                     <ul>
@@ -36,13 +59,14 @@ export default class Order extends Component {
                     </ul>
                 </div>
                 <div className="accordOrder">
-                    <p><span></span> 我同意 <a href="">《网易严选服务协议》</a></p>
+                    <div onClick={this.ChangeAgree}><i className={this.state.agree ? "choseBg" : ""}></i> 我同意 <Link
+                        to="/agreement">《网易严选服务协议》</Link></div>
                 </div>
                 <div className="OrderPay">
                     <span>应付:¥ </span>
                     <span>去付款</span>
                 </div>
             </div>
-    )
+        )
     }
-    }
+}
