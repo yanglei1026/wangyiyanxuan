@@ -5,7 +5,7 @@ import "./index.less";
 export default class Address extends Component {
     constructor(){
         super();
-        this.state={bool:true,sel:true}
+        this.state={bool:false,sel:true}
     }
     confirmAdd=()=>{
         this.setState({sel:!this.state.sel});
@@ -17,7 +17,7 @@ export default class Address extends Component {
     }
     render() {
         return (
-            <div className="address">
+            <div className="address-info">
                 <form action="" >
                     <div className="address-select">
                         <div><p onClick={this.selAdd}>省份、城市、区县</p></div>

@@ -6,35 +6,47 @@ export default class Invoice extends Component {
     render() {
         return (
             <div className="invoice-total">
-                <div className="">
+                <div className="invoice-top">
                     <div className="invoice-header">
                         <span>发票类型</span>
                         <span>电子普通发票</span>
-                        <p>电子普通发票是税局认可的有效凭证，其法律效力、基本用途及使用规定同纸质发票</p>
                     </div>
-                    <div className="invoice-main">
-                        <div>*发票抬头</div>
+                    <div className="invoice-text">电子普通发票是税局认可的有效凭证，其法律效力、基本用途及使用规定同纸质发票</div>
+                </div>
+                <div className="invoice-main">
+                    <div className="invoice taitou">
+                        <div className="invoice-name">*发票抬头</div>
                         <ul>
-                            <li placeholder="请输入个人或姓名">个人</li>
+                            <li className="active" placeholder="请输入个人或姓名">个人</li>
                             <li placeholder="请输入单位名称">单位</li>
                         </ul>
-                        <div><input type="text" value="" className="form-control" /></div>
                     </div>
-                    <div className="invoice-info">
-                        <div>
-                            <div>＊收票人手机</div>
-                            <div><input type="mobile" className="form-control"/></div>
-                        </div>
-                        <div>
-                            <div>收票人邮箱</div>
-                            <div><input type="email" className="form-control" /></div>
-                        </div>
+                    <div className="invoice type">
+                        <input type="text" value="个人" className="form-control"/></div>
+                    <div className="invoice content">
+                        <div>发票内容</div>
+                        <div>明细</div>
                     </div>
-                    <div className="invoice-tip">
-                        <div className="invoice-type">
-                            更多发票类型>>
-                        </div>
-                        <span className="invoice-notice">
+                    <div className="invoice money">
+                        <div>发票金额</div>
+                        <div>¥</div>
+                    </div>
+                </div>
+                <div className="invoice-info">
+                    <div className="info mobile">
+                        <div>＊收票人手机</div>
+                        <div><input type="mobile" className="form-control"/></div>
+                    </div>
+                    <div className="info email">
+                        <div>收票人邮箱</div>
+                        <div><input type="email" className="form-control"/></div>
+                    </div>
+                </div>
+                <div className="invoice-tip">
+                    <div className="invoice-type">
+                        更多发票类型>>
+                    </div>
+                    <span className="invoice-notice">
                             <span>发票须知</span>
                             <span>1.  依照税局最新开票法规，纸质普通发票和电子普通发票，开具内容均为明细</span>
                             <span>2. 开票金额为用户实际支付的金额（不含礼品卡与不支持该发票类型的商品实付金额）</span>
@@ -44,8 +56,7 @@ export default class Invoice extends Component {
                             <span>6. 单笔订单只支持开具一种类型的发票</span>
                             <span>7. 年购订单发票随每期子单寄出</span>
                         </span>
-                    </div>
-                    <Link to="/help"><div>发票常见问题</div></Link>
+                    <div className="invoice-qes"><Link to="/help">发票常见问题 </Link></div>
                 </div>
                 <div className="invoice-check">
                     <button>取消</button>

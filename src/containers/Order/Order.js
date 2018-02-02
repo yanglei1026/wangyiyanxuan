@@ -64,7 +64,7 @@ export default class Order extends Component {
                 </div>
                 <div className="OrderPay">
                     <span>应付:¥ </span>
-                    <span>去付款</span>
+                    <Link to="/fukuan"><span>去付款</span></Link>
                 </div>
             </div>
         )

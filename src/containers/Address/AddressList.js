@@ -18,7 +18,6 @@ export default class AddressList extends Component {
 
 
     render() {
-
         return (
             <div className="address-hide">
                 <div className="address-swiper">
