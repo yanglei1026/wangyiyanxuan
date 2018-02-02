@@ -5,11 +5,26 @@ import actions from "../../redux/actions/home";
 import {WhiteSpace,Flex,WingBlank} from "antd-mobile"
 import Item from "../../components/Item/Item";
 
+import Transition from 'react-transition-group/Transition';
+
+const duration = 300;
+
+const defaultStyle = {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: 0,
+}
+
+const transitionStyles = {
+    entering: { opacity: 0 },
+    entered:  { opacity: 1 },
+};
+
+
 @connect(state => ({...state.home}), actions)
 export default class Detail extends Component {
     componentDidMount() {
         this.props.getHomeData("jujia");
-        // this.setState({data:this.props.data});
+        this.setState({data:this.props.data});
     }
 
     render() {
