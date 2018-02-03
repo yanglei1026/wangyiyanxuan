@@ -6,7 +6,6 @@ import {withRouter,Link} from "react-router-dom"
 export default class Item1 extends  Component{
 
     render(){
-        console.log(this.props.item);
         return (
             <div className="item-container">
                 <Link to={{pathname:"/detail", state:{name:"yanglei"}}}>

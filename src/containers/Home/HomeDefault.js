@@ -61,7 +61,7 @@ export default class HomeDefault extends Component {
             <div className="home-container">
                 <Slider items={items} itemsBg={itemsBg}/>
                 <HomeBody itemCo={itemCo} Go={Go} shoufa={shoufa}/>
-                <div className="product-list">
+                <div className="home-product-list">
                     <WingBlank>
                         <ul>
                             <Flex>
