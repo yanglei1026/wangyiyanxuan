@@ -25,15 +25,9 @@ app.use(function (req, res, next) {
 let home_sliders = require("./mock/home-slider");
 let homeData = require("./mock/home");
 let fenlei = require("./mock/fenlei");
-// let axios = require("axios");
+
 
 let users = [];
-
-// app.get('/sliders', function (request, response) {
-//     axios.get('http://html5train.com/orgHomePage.do?action=getOrgHomePageInfo&layoutType=default&organizationId=510&_=1516694175474').then(function (res) {
-//         response.json(res.data.moduleDTOList.list[0].moduleMap.map.pictureDTOList.list);
-//     });
-// });
 
 app.get('/home/sliders', function (request, response) {
     response.json(home_sliders);
@@ -98,3 +92,23 @@ app.post("/register", function (req, res) {
 //     if (user.username === undefined) {
 //     }
 // });
+
+app.post("/register", function (req, res) {
+    let {username, password} = req.body;
+    let backUp_users = users;
+
+    if (backUp_users.length){
+        let id = 1;
+        users.push({id, username, password});
+        res.send({err:0, msg:"注册成功"})
+    } if(backUp_users.length>0){
+        let result = users.find(item=>item.username===username);
+        if (result.id === undefined){
+            let id = users[users.length-1].id+1;
+            user.push({id,username, password});
+            res.send({err:0, msg:"注册成功"})
+        } else {
+            res.send({err:1, msg:"注册失败, 用户已存在"})
+        }
+    }
+})

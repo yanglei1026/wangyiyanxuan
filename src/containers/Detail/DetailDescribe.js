@@ -29,7 +29,7 @@ export default class DetailDescribe extends React.Component {
                     <ul className="user-say">
                         <li className="user-num">127</li>
                         <li className="user">用户评价</li>
-                        <a className="look">查看</a>
+                        <Link to='/detail_comment' className="look">查看</Link>
                     </ul>
                 </div>
                 <div className="user-select">
@@ -65,7 +65,7 @@ export default class DetailDescribe extends React.Component {
                 </div>
                 <div className="user-title">
                     <p className="user-idea">全部评论(130)</p>
-                    <i className="iconfont icon-youjiantou"></i>
+                    <Link to='/detail_comment' className="iconfont icon-youjiantou"></Link>
                     <p className="idea-score">96.9%好评</p>
                 </div>
                 <div className="idea"></div>
