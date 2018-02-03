@@ -12,6 +12,7 @@ import HomeBody from "./HomeBody/HomeBody";
 import {WhiteSpace,Flex,WingBlank} from "antd-mobile"
 import Item from "../../components/Item/Item";
 import BackToTop from "../../components/BackToTop/BackToTop";
+import Item1 from "../../components/Item1/Item1";
 let items = [{src:"http://yanxuan.nosdn.127.net/5c71d542850d5c0aa5a1591ce697bdb5.jpg?imageView&thumbnail=750x0&quality=75"},{src:"http://yanxuan.nosdn.127.net/1aa40d70966f2f512f6976fb7431fa0b.jpg?imageView&thumbnail=750x0&quality=75"},{src:"http://yanxuan.nosdn.127.net/890ed24c6c9ee5248ce80daed8e1109a.jpg?imageView&thumbnail=750x0&quality=75"},{src:"http://yanxuan.nosdn.127.net/50ddf56e7160da81638128c8b8883dc2.jpg?imageView&thumbnail=750x0&quality=75"},{src:"http://yanxuan.nosdn.127.net/e5891a68df93c5ee57ddb5b256068dac.jpg?imageView&thumbnail=750x0&quality=75"}];
 let itemsBg={src:"http://yanxuan.nosdn.127.net/cae45612b8aae577d8bd73338e2fc02c.png"};
 let itemCo={src:"//yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/go2-3e511991d6.png"};
@@ -64,20 +65,20 @@ export default class HomeDefault extends Component {
                     <WingBlank>
                         <ul>
                             <Flex>
-                                <Flex.Item><Item/></Flex.Item>
-                                <Flex.Item><Item/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
                             </Flex>
                             <Flex>
-                                <Flex.Item><Item/></Flex.Item>
-                                <Flex.Item><Item/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
                             </Flex>
                             <Flex>
-                                <Flex.Item><Item/></Flex.Item>
-                                <Flex.Item><Item/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
                             </Flex>
                             <Flex>
-                                <Flex.Item><Item/></Flex.Item>
-                                <Flex.Item><Item/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
+                                <Flex.Item><Item1/></Flex.Item>
                             </Flex>
                         </ul>
                     </WingBlank>

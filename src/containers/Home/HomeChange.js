@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import actions from "../../redux/actions/home";
 import {WhiteSpace,Flex,WingBlank} from "antd-mobile"
 import Item from "../../components/Item/Item";
+import "./inline.less"
 
 @connect(state=>({...state.home}),actions)
 export default class HomeChange extends  Component{
@@ -18,6 +19,8 @@ export default class HomeChange extends  Component{
         // data = data.data;  // data 是
         // data === undefined? data =  this.state.data: data =  data.data;  // data 是
         data===undefined? data={}:null;
+        let list = data.product_lists;
+        list===undefined? list =[]: null;
         return (
             <div className="product-list">
                 <img src={data.top_img} className='top-img'/>
@@ -25,23 +28,12 @@ export default class HomeChange extends  Component{
                     <p className="name">{data.titlename}</p>
                     <p className="info">{data.info}</p>
                 </div>
-                <WingBlank>
+                <WingBlank size="md">
                     <ul>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
-                        </Flex>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
-                        </Flex>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
-                        </Flex>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
+                        <Flex wrap="wrap">
+                            {list.map((item,index)=>{
+                               return  (<Item key={index} item={item} className="inline"/>)
+                            })}
                         </Flex>
                     </ul>
                 </WingBlank>
