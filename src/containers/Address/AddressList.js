@@ -3,10 +3,6 @@ import provinceList from "./Addressdata";
 
 
 export default class AddressList extends Component {
-    constructor() {
-        super();
-
-    }
 
     handleClick = (e) => {
         //alert(1)
@@ -15,6 +11,7 @@ export default class AddressList extends Component {
             <li key={index}> item["name"]</li>
         ))
     };
+
 
 
     render() {
@@ -47,7 +44,6 @@ export default class AddressList extends Component {
                         </div>
                     </div>
                 </div>
-
             </div>
         )
     }

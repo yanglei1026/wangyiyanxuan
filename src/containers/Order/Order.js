@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "./index.less";
 import {Link} from "react-router-dom";
+import DetailHeader from "../../components/DetailHeader/DetailHeader";
 
 export default class Order extends Component {
     constructor() {
@@ -15,6 +16,7 @@ export default class Order extends Component {
     render() {
         return (
             <div className="cartOrder">
+                <DetailHeader/>
                 <Link to="/address">
                     <div className="defaultOrder">
                         <div className="left">
@@ -64,7 +66,7 @@ export default class Order extends Component {
                 </div>
                 <div className="OrderPay">
                     <span>应付:¥ </span>
-                    <Link to="/fukuan"><span>去付款</span></Link>
+                    <Link to="/pay"><span>去付款</span></Link>
                 </div>
             </div>
         )

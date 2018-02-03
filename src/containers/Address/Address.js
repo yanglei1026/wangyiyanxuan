@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AddressList from "./AddressList";
 import "./index.less";
+import {Link}  from "react-router-dom";
 
 export default class Address extends Component {
     constructor(){
@@ -29,7 +30,7 @@ export default class Address extends Component {
                     <div className="address-default">
                        <i onClick={this.confirmAdd} className = {this.state.sel?"sel-bg":""}></i>  <span> 设为默认地址</span>
                     </div>
-                    <div className="address-keep"><a href="javascript:;">保存</a></div>
+                    <div className="address-keep"><Link to="/order">保存</Link></div>
                 </form>
                 {this.state.bool?<AddressList/>:""}
             </div>

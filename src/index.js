@@ -23,6 +23,7 @@ import Search from "./containers/Detail/Search";
 import Detail_server from "./containers/Detail/Detail_server";
 import Detail_choose from "./containers/Detail/Detail_choose";
 import CartMore from "./containers/Cart/CartMore";
+import Pay from "./containers/Pay/Pay";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -47,6 +48,7 @@ ReactDOM.render(
                     <Route path="/detail_server" component={Detail_server}/>
                     <Route path="/detail_choose" component={Detail_choose}/>
                     <Route path="/cartmore" component={CartMore}/>
+                    <Route path="/pay" component={Pay}/>
                     <Redirect path="*" to="/home"/>
                 </Switch>
             </App>

@@ -30,7 +30,7 @@ export default class Cart extends Component {
                        <div className="Cart-login">
                            <img src="../../../resource/images/cartbg.png" alt=""/>
                            <div className="Cart-title">去添加点什么吧</div>
-                           <Link to="/cartmore"><div className="Cart-btn" >登录</div></Link>
+                           <Link to="/login"><div className="Cart-btn" >登录</div></Link>
                        </div>
                    </div>
                </div>

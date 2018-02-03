@@ -3,6 +3,13 @@ import "./index.less";
 import {Link} from "react-router-dom";
 
 export default class Invoice extends Component {
+    constructor(){
+        super();
+        this.state={hide:false}
+    }
+    handleClick=()=>{
+        this.setState({hide:!this.state.hide})
+    }
     render() {
         return (
             <div className="invoice-total">
@@ -25,20 +32,20 @@ export default class Invoice extends Component {
                         <input type="text" value="个人" className="form-control"/></div>
                     <div className="invoice content">
                         <div>发票内容</div>
-                        <div>明细</div>
+                        <div>明细 <i className="wenhao" onClick={this.handleClick}></i></div>
                     </div>
                     <div className="invoice money">
                         <div>发票金额</div>
-                        <div>¥</div>
+                        <div>¥{}</div>
                     </div>
                 </div>
                 <div className="invoice-info">
                     <div className="info mobile">
-                        <div>＊收票人手机</div>
+                        <div>＊收票人手机{}</div>
                         <div><input type="mobile" className="form-control"/></div>
                     </div>
                     <div className="info email">
-                        <div>收票人邮箱</div>
+                        <div>收票人邮箱{}</div>
                         <div><input type="email" className="form-control"/></div>
                     </div>
                 </div>
@@ -60,7 +67,13 @@ export default class Invoice extends Component {
                 </div>
                 <div className="invoice-check">
                     <button>取消</button>
-                    <button className="btn-right">保存</button>
+                    <button className="btn-right"><Link to="/order">保存</Link></button>
+                </div>
+                <div className={this.state.hide?"inv-hide show":"inv-hide"} >
+                    <div className="hide">
+                        <div className="inv-ka">依照国税总局开票法规，严选订单开具纸质普通发票、电子普通发票，开票内容为明细；礼品卡开票内容为预付卡</div>
+                    <div className="inv-sure" onClick={this.handleClick}><button>确定</button></div>
+                    </div>
                 </div>
             </div>
         )
