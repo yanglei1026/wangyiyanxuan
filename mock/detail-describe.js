@@ -1,0 +1,20 @@
+module.exports = [
+    {
+        "id":1,
+        "img":"http://yanxuan.nosdn.127.net/03e9ebc98168a6e284eb57b36c9067ff.jpg",
+        "up":"源于日本",
+        "down":"正圆花珠"
+    },
+    {
+        "id":2,
+        "img":"http://yanxuan.nosdn.127.net/7de428e54cc40b163f6a0068796d1b79.jpg",
+        "up":"18K金",
+        "down":"曼妙光泽"
+    },
+    {
+        "id":3,
+        "img":"http://yanxuan.nosdn.127.net/e86e1c9b390bcfc3a15a9264c20ef9e8.jpg",
+        "up":"百里挑一",
+        "down":"永恒经典"
+    }
+];

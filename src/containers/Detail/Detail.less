@@ -1,30 +1,422 @@
-.product-list{
+html {
+  font-size: 52px;
+  color: #333;
+}
+.detail{
   width: 100%;
-  img.top-img{
+  height: 100%;
+  overflow: hidden;
+  font-size: 14/52rem;
+  .detail-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
     width: 100%;
+    height: 46/52rem;
+    line-height: 46/52rem;
+    border-top: 1/52rem solid #ddd;
+    justify-content: space-between;
+    text-align: center;
+    background: #fafafa;
+    overflow: hidden;
+
+    .skip{
+      display: inline-block;
+      width: 150/52rem;
+      line-height: 46/52rem;
+      text-align: center;
+      float: right;
+      border-left: 1/52rem solid #ccc;
+      color: #333;
+      &.addCart {
+        background: #b4282d;
+        color: #fff;
+      }
+    }
+
+    .icon-fuwuerji {
+      font-size: 26/52rem;
+      color: #999;
+    }
   }
-  .content-title{
+
+  .swiper-container{
+    background: #fff;
+    position: relative;
+    margin-top: 46/52rem;
+    height: 350/52rem;
+    overflow: hidden;
+    .swiper-wrapper{
+      height: 100%;
+      img{
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .swiper-pagination{
+      position: absolute;
+      left:auto;
+      right:20/52rem;
+      bottom: 20/52rem;
+      z-index: 100;
+      width: 36/52rem;
+      height: 14/52rem;
+      line-height: 14/52rem;
+      text-align: center;
+      font-size: 10/52rem;
+      color: #333;
+      background: #fff;
+      border-radius: 5/52rem;
+    }
+  }
+
+  .detail-describe {
+    height: 100%;
     width: 100%;
-    height: 1.152rem;
-    line-height: 1.252rem;
-    p.name{
-      font-size :.3rem;
-      height: .7rem;
-      line-height: .7rem;
-      text-align: center;
-      color:#333333;
+    .detail-label {
+      width: 100%;
+      padding: 12/52rem 15/52rem;
+      display: flex;
+      li {
+        width: 32%;
+        float: left;
+        img {
+          width: 36/52rem;
+          height: 36/52rem;
+          border-radius: 50%;
+          float: left;
+          margin-right: 8/52rem;
+        }
+        .desc-text {
+          font-size: 14/52rem;
+          display: block;
+          float: left;
+          span {
+            display: block;
+            margin-bottom: 8/52rem;
+            width: 57/52rem;
+            height: 16/52rem;
+          }
+        }
+      }
     }
-    p.info{
-      font-size: .2rem;
-      height: .446rem;
-      line-height: .446rem;
-      text-align: center;
-      color:#999999;
+    .detail-product {
+      width: 100%;
+      margin: 10/52rem 15/52rem;
+      height: 140/52rem;
+      border-bottom: 10/52rem solid #f4f4f4;
+      .product-content {
+        width: 75%;
+        float: left;
+        border-right: 1/52rem dashed #919191;
+        margin-right: 10/52rem;
+        .product-title {
+          font-size: 18/52rem;
+          height: 54/52rem;
+          line-height: 27/52rem;
+          color: #333;
+        }
+        .product-desc {
+          font-size:12/52rem;
+          color: #999;
+          height: 14/52rem;
+          line-height: 14/52rem;
+          margin: 7/52rem 0;
+        }
+        .product-price {
+          font-size: 22/52rem;
+          font-weight: 700;
+          color: #B4282D;
+        }
+        .product-label {
+          margin-top:10/52rem;
+          height: 18/52rem;
+          width: 40/52rem;
+          line-height: 18/52rem;
+          color: #f48f18;
+          text-align: center;
+          border: 1/52rem solid #f48f18;
+          font-size: 12/52rem;
+          padding-left: 3/52rem;
+          i {
+            font-size: 14/52rem;
+          }
+        }
+      }
+      .user-say {
+        width: 15%;
+        float: left;
+        text-align: center;
+        color: #B4282D;
+        font-size: 16/52rem;
+        margin:32/52rem auto;
+        .user-num {
+          height: 18/52rem;
+          line-height: 18/52rem;
+          font-weight: 600;
+          margin-bottom: 5/52rem;
+        }
+        .user {
+          font-size: 14/52rem;
+        }
+        .look {
+          color: #333;
+          display: block;
+          width: 47/52rem;
+          height: 18/52rem;
+          text-align: center;
+          line-height: 18/52rem;
+          border: 1/52rem solid #7F7F7F;
+          margin: 10/52rem auto;
+          font-size: 12/52rem;
+        }
+      }
     }
-  }
-  ul{
-    li{
-      width: 100% ;
+    .user-select {
+      padding: 10/52rem 15/52rem;
+      height: 40/52rem;
+      width: 100%;
+      line-height: 40/52rem;
+      border-bottom: 1/52rem solid #d9d9d9;
+      font-size: 14/52rem;
+      .select-content {
+        display: inline-block;
+        width: 90%;
+        float: left;
+      }
+      .icon-youjiantou {
+        width: 10%;
+        display: inline-block;
+        font-size: 20/52rem;
+        float: right;
+      }
+    }
+    .add-score {
+      padding: 10/52rem 15/52rem;
+      height: 40/52rem;
+      width: 100%;
+      line-height: 40/52rem;
+      border-bottom: 1/52rem solid #d9d9d9;
+      font-size: 14/52rem;
+    }
+    .product-server {
+      padding:10/52rem 15/52rem;
+      width: 100%;
+      height:65/52rem;
+      border-bottom: 10/52rem solid #f4f4f4;
+      font-size: 14/52rem;
+      .server-title {
+        margin-right: 10/52rem;
+        float: left;
+        width: 12%;
+      }
+      .server-content {
+        float: left;
+        width: 72%;
+        li {
+          float: left;
+          height: 13/52rem;
+          line-height: 13/52rem;
+          margin-bottom: 8/52rem;
+          margin-right: 20/52rem;
+          color: #7f7f7f;
+          .red-dot {
+            display: inline-block;
+            width: 4/52rem;
+            height: 4/52rem;
+            margin: 5/52rem;
+            border-radius: 50%;
+            background: #B4282D;
+          }
+          p {
+            display: inline-block;
+          }
+        }
+      }
+      .icon-youjiantou {
+        display: block;
+        float: right;
+        width: 10%;
+        line-height: 65/52rem;
+        font-size: 20/52rem;
+      }
+    }
+    .user-title {
+      height: 40/52rem;
+      line-height: 40/52rem;
+      padding: 10/52rem 15/52rem;
+      width: 100%;
+      border-bottom: 1/52rem solid #d9d9d9;
+      font-size: 14/52rem;
+      p {
+        display: inline-block;
+      }
+      .idea-score {
+        float: right;
+      }
+      .icon-youjiantou {
+        display: inline-block;
+        float: right;
+        width: 10%;
+        font-size: 20/52rem;
+      }
+    }
+    .product-params {
+      padding: 15/52rem 15/52rem;
+      width: 92%;
+      .params-title {
+        font-size: 14/52rem;
+      }
+      li {
+        height: 28/52rem;
+        line-height: 28/52rem;
+        border-bottom: 1/52rem dashed #c7c7c7;
+        font-size: 12/52rem;
+        &:nth-last-child(1){
+          border-bottom: none;
+          height: 65/52rem;
+          line-height: 20/52rem;
+        }
+        span {
+          display: inline-block;
+          &:nth-child(1) {
+            width: 25%;
+            color: #919191;
+            float: left;
+          }
+          &:nth-child(2) {
+            width: 65%;
+          }
+        }
+
+      }
+    }
+    .product-picture{
+
+      width: 100%;
+      p{
+        height: 100/52rem;
+        margin-top: -1/52rem;
+        &:nth-last-child(1){
+          height: 30/52rem;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .quality-test{
+      padding: 15/52rem;
+      width: 93%;
+      height: 520/52rem;
+      .quality-title{
+        position: relative;
+        width: 100%;
+        height: 50/52rem;
+        text-align: center;
+        .line{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 170/52rem;
+          height: 1/52rem;
+          margin: auto;
+          z-index: 3;
+          border-bottom: 1/52rem solid #ccc;
+        }
+        .quality-text{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          padding: 0 10/52rem;
+          line-height: 50/52rem;
+          font-size: 16/52rem;
+          background: #fff;
+          width: 64/52rem;
+          height: 50/52rem;
+          z-index: 5;
+        }
+      }
+      .quality-img{
+        width: 100%;
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .common-problem{
+      margin-bottom: 50/52rem;
+      padding: 15/52rem;
+      width: 93%;
+      .common-title{
+        position: relative;
+        width: 100%;
+        height: 50/52rem;
+        text-align: center;
+        .line{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 170/52rem;
+          height: 1/52rem;
+          margin: auto;
+          z-index: 3;
+          border-bottom: 1/52rem solid #ccc;
+        }
+        .common-text{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          padding: 0 10/52rem;
+          line-height: 50/52rem;
+          font-size: 16/52rem;
+          background: #fff;
+          width: 64/52rem;
+          height:50/52rem;
+          z-index: 5;
+        }
+      }
+      .common-content{
+        line-height: 18/52rem;
+        h3{
+          color: #303030;
+          font-weight: normal;
+          font-size: 14/52rem;
+          .dot{
+            display: inline-block;
+            width: 4/52rem;
+            height: 4/52rem;
+            margin: 5/52rem;
+            border-radius: 50%;
+            background: #B4282D;
+          }
+          .problem-title{
+            display: inline-block;
+
+          }
+        }
+        .problem-content{
+          margin-left: 10/52rem ;
+          color: #787878;
+          font-size: 12/52rem ;
+        }
+      }
     }
   }
 }
+

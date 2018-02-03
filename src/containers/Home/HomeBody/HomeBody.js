@@ -2,6 +2,7 @@ import React from 'react';
 import './index.less'
 import Counter from "./Count/Counter";
 import a from '../images/qianbao.png';
+import {Link} from "react-router-dom"
 import Item from '../../../components/Item/Item'
 
 export default class HomeBody extends React.Component {
@@ -56,15 +57,15 @@ export default class HomeBody extends React.Component {
                         <ul className="swiper-wrapper ">
                             {this.props.shoufa.map((item,index)=>(
                                 <li className="swiper-slide swiper-content" key={index}>
-                                    <a href="">
+                                    <Link to="/detail">
                                         <div className='content-nav'>
-                                            <img src={item.src} alt=""/>
+                                            <img src={item.src}/>
                                         </div>
                                         <span className='baobing'>爆品</span>
                                         <div className='name'>{item.name}</div>
                                         <div className='newItemDesc'>{item.newItemDesc}</div>
                                         <div className='dolor'><span>￥</span><span>{item.Price}</span></div>
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                             <li className="swiper-slide">

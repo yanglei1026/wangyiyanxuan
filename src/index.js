@@ -11,21 +11,29 @@ import {Provider} from "react-redux"
 import store from "./redux/index";
 import "./util/reset.less";
 import Detail from "./containers/Detail/Detail";
-import Item from "./components/Item/Item";
+import Register from "./containers/Register/Register";
+import Login from "./containers/Login/Login";
+import Search from "./containers/Detail/Search";
+import Detail_server from "./containers/Detail/Detail_server";
+import Detail_choose from "./containers/Detail/Detail_choose";
 
 ReactDOM.render(
     <Provider store={store}>
         <HashRouter>
             <App>
                 <Switch>
-                    <Route path="/" exact component={Home}/>
                     <Route path="/home" component={Home}/>
                     <Route path="/shiwu" component={Shiwu}/>
                     <Route path="/fenlei" component={Fenlei}/>
                     <Route path="/cart" component={Cart}/>
                     <Route path="/geren" component={Geren}/>
                     <Route path="/detail" component={Detail}/>
-                    <Route path="/item" component={Item}/>
+                    <Route path="/register" component={Register}/>
+                    <Route path="/login" component={Login}/>
+                    <Route path="/search" component={Search}/>
+                    <Route path="/detail_server" component={Detail_server}/>
+                    <Route path="/detail_choose" component={Detail_choose}/>
+                    <Redirect path="*" to="/home"/>
                 </Switch>
             </App>
         </HashRouter>

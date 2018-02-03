@@ -1,7 +1,7 @@
 module.exports =
     {
-    tuijian: {
-            category: "cloth",
+    fuzhuang: {
+            category: "fuzhuang",
             top_img: "http://yanxuan.nosdn.127.net/3e606a7d7290270fb88a5a8aaf205d73.jpg?quality=85&thumbnail=750x0&imageView",
             titlename: "毛衫",
             info: "温暖柔软，品质之选",
@@ -99,8 +99,8 @@ module.exports =
                 }
             ]
         },
-    homestay:{
-        category: "homestay",
+    jujia:{
+        category: "jujia",
         top_img: "http://yanxuan.nosdn.127.net/3e606a7d7290270fb88a5a8aaf205d73.jpg?quality=85&thumbnail=750x0&imageView",
         titlename: "床品件套",
         info: "MUJI等品牌制造商出品",
@@ -198,9 +198,9 @@ module.exports =
             }
         ]
     },
-    kitchen:{
-        category: "kitchen",
-        top_img: "http://yanxuan.nosdn.127.net/b173e46931d51e8057433c3f8450bbfe.jpg?quality=85&thumbnail=750x0&imageView",
+    canchu:{
+        category: "canchu",
+        top_img: "http://yanxuan.nosdn.127.net/f15e71069a6f5a572b801da9833faed6.jpg?quality=85&thumbnail=750x0&imageView",
         titlename: "水具杯壶",
         info: "精工生产制作，匠人手艺",
         product_lists:[
@@ -297,9 +297,9 @@ module.exports =
             }
         ]
     },
-    accessory:{
-        category: "accessory",
-        top_img:"http://yanxuan.nosdn.127.net/340cf78e0ad24ee4f03e93ab456cb367.jpg?quality=85&thumbnail=750x0&imageView",
+    peijian:{
+        category: "peijian",
+        top_img:"http://yanxuan.nosdn.127.net/58e154457c46bbfc9fc297036f13e2d9.jpg?quality=85&thumbnail=750x0&imageView",
         titlename:"行李箱",
         info:"轻奢行李箱陪你走天下",
         product_lists:[
@@ -497,7 +497,7 @@ module.exports =
     },
     xihu: {
         category: "xihu",
-        top_img: "",
+        top_img: "http://yanxuan.nosdn.127.net/4bf3a0fe4ef2422fbcaadeac93ef984b.jpg?quality=85&thumbnail=750x0&imageView",
         titlename: "毛衫",
         info: "温暖柔软，品质之选",
         product_lists:[
@@ -596,7 +596,7 @@ module.exports =
     },
     zahuo: {
         category: "zahuo",
-        top_img: "",
+        top_img: "http://yanxuan.nosdn.127.net/634b078ddc7372ca5a4c6e8c9d9516d0.jpg?quality=85&thumbnail=750x0&imageView",
         titlename: "毛衫",
         info: "温暖柔软，品质之选",
         product_lists:[
@@ -695,7 +695,7 @@ module.exports =
     },
     yinshi: {
         category: "yinshi",
-        top_img: "",
+        top_img: "http://yanxuan.nosdn.127.net/904f81f89a58b4e36628ba721321e1aa.jpg?quality=85&thumbnail=750x0&imageView",
         titlename: "毛衫",
         info: "温暖柔软，品质之选",
         product_lists:[
@@ -794,7 +794,7 @@ module.exports =
     },
     yingtong: {
         category: "yingtong",
-        top_img: "",
+        top_img: "http://yanxuan.nosdn.127.net/84067d85d9c9b7e59a2e433666ad42ee.jpg?quality=85&thumbnail=750x0&imageView",
         titlename: "毛衫",
         info: "温暖柔软，品质之选",
         product_lists:[
@@ -893,7 +893,7 @@ module.exports =
     },
     zhiqu:{
         category: "zhiqu",
-        top_img: "http://yanxuan.nosdn.127.net/3e606a7d7290270fb88a5a8aaf205d73.jpg?quality=85&thumbnail=750x0&imageView",
+        top_img: "http://yanxuan.nosdn.127.net/2ad471d03a23b4e949b2fb5edb846b3a.jpg?quality=85&thumbnail=750x0&imageView",
         titlename: "床品件套",
         info: "MUJI等品牌制造商出品",
         product_lists:[
