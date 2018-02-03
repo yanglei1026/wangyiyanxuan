@@ -27,7 +27,7 @@ export default class Shiwu extends Component {
                 {/*全球和LOOK*/}
 <Global/>
                 {/*加载更多*/}
-                <More/>
+<More/>
             </div>
         )
     }
