@@ -23,7 +23,7 @@ export default class Login extends React.Component {
                     <li className="register"><Link to="/register">注册账号</Link></li>
                     <li className="forget-password"><Link to="/password">忘记密码</Link></li>
                 </ul>
-                <div className="other-way"></div>
+                <div className="other-way">其他方式登录</div>
             </div>
         )
     }

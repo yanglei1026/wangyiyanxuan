@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 export default class Register extends React.Component {
     render() {
         return (
-            <div>
+            <div className="regitser-container">
                 <ul className="register">
                     <li><input className="username" ref="username" type="text" placeholder="注册 用户名"/></li>
                     <li><input className="password" ref="password" type="text" placeholder="密码"/></li>
