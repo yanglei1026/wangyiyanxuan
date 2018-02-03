@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import logo from "../../../resource/images/logo.png";
-import {Carousel} from "antd-mobile"
 
 
 export default class HomeHeader extends Component {
@@ -8,7 +7,6 @@ export default class HomeHeader extends Component {
         super();
     }
     componentDidMount(){}
-
 
     render() {
         return (

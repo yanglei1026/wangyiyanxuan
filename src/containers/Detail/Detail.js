@@ -1,70 +1,65 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import "./Detail.less";
-import actions from "../../redux/actions/home";
-import {WhiteSpace,Flex,WingBlank} from "antd-mobile"
-import Item from "../../components/Item/Item";
-
-import Transition from 'react-transition-group/Transition';
-
-const duration = 300;
-
-const defaultStyle = {
-    transition: `opacity ${duration}ms ease-in-out`,
-    opacity: 0,
-}
-
-const transitionStyles = {
-    entering: { opacity: 0 },
-    entered:  { opacity: 1 },
-};
+import React,{Component} from "react";
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import actions from '../../redux/actions/choose';
+import "./Detail.less"
+import sliders from '../../../mock/detail-banner';
+import DetailDescribe from "./DetailDescribe";
+import content from '../../../mock/detail-describe';
+import picture from '../../../mock/detail-picture';
+import DetailBanner from "./DetailBanner";
+import BackToTop from '../../components/BackToTop/BackToTop';
+import DetailHeader from "../../components/DetailHeader/DetailHeader";
 
 
-@connect(state => ({...state.home}), actions)
-export default class Detail extends Component {
-    componentDidMount() {
-        this.props.getHomeData("jujia");
-        this.setState({data:this.props.data});
+let IMG_DATA = [];
+sliders.forEach(item=>{
+    IMG_DATA.push(`${item.img}`);
+});
+let describe = [];
+content.forEach(item=>{
+    describe.push(item);
+});
+let PIC_DATA = [];
+picture.forEach(item=>{
+    PIC_DATA.push(item);
+});
+
+function changeTop(flag){
+    window.onscroll = ()=>{
+        let scrT = document.documentElement.scrollTop;
+        let winH = document.documentElement.clientHeight;
+        if(scrT > winH){
+            this.setState({isShow:!flag});
+        }else{
+            this.setState({isShow:flag});
+        }
     }
-
-    render() {
-        let data = this.props.data;
-        // err: 0, data: {…}, hasMore: true, msg: "数据请求成功"
-        data = data.data;  // data 是
-        console.log(data);
-        data===undefined? data={}:null;
+}
+@connect(state=>({...state.choose}),actions)
+export default class Detail extends Component{
+    constructor(){
+        super();
+        this.state={isShow:false}
+    }
+    componentDidMount(){
+        changeTop.call(this,this.state.isShow);
+    }
+    render(){
         return (
-            <div className="product-list">
-                <img src={data.top_img} className='top-img'/>
-                <div className="content-title">
-                    <p className="name">{data.titlename}</p>
-                    <p className="info">{data.info}</p>
+            <div className="detail">
+                <DetailHeader/>
+                <DetailBanner item={IMG_DATA}/>
+                <DetailDescribe  item={describe} cur={PIC_DATA}/>
+                <div className="detail-footer">
+                    <i className="iconfont icon-fuwuerji"></i>
+                    <Link to={this.props.how===undefined?'/detail_choose':'/cart'} className="skip addCart">加入购物车</Link>
+                    <Link to={this.props.how===undefined?'/detail_choose':'/buy'} className="skip buy">立即购买</Link>
                 </div>
-                <WingBlank>
-                    <ul>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
-                        </Flex>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
-                        </Flex>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
-                        </Flex>
-                        <Flex>
-                            <Flex.Item><Item/></Flex.Item>
-                            <Flex.Item><Item/></Flex.Item>
-                        </Flex>
-                    </ul>
-                </WingBlank>
-                <WhiteSpace size="lg"/>
-                <WhiteSpace size="lg"/>
-                <WhiteSpace size="lg"/>
+                <div>
+                    {this.state.isShow?<BackToTop/>:''}
+                </div>
             </div>
         )
     }
 }
-

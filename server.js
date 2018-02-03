@@ -59,11 +59,8 @@ app.get("/home/:category", function (req, res) {
     let {category} = req.params;
     console.log(category);
     let data = {};
+        data = homeData[category];
 
-    for (let key in homeData) {
-        data = homeData[key]
-
-    }
     if (data["category"] === undefined) {
         res.send({err: 1, hasMore: false, msg: "请求失败"});
         return

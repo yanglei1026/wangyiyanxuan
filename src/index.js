@@ -17,13 +17,18 @@ import Invoice from "./containers/Invoice/Invoice";
 import Help from "./containers/Help/Help";
 import Item from "./components/Item/Item";
 import Agreement from "./containers/Agreement/Agreement";
+import Register from "./containers/Register/Register";
+import Login from "./containers/Login/Login";
+import Search from "./containers/Detail/Search";
+import Detail_server from "./containers/Detail/Detail_server";
+import Detail_choose from "./containers/Detail/Detail_choose";
+import CartMore from "./containers/Cart/CartMore";
 
 ReactDOM.render(
     <Provider store={store}>
         <HashRouter>
             <App>
                 <Switch>
-                    <Route path="/" exact component={Home}/>
                     <Route path="/home" component={Home}/>
                     <Route path="/shiwu" component={Shiwu}/>
                     <Route path="/fenlei" component={Fenlei}/>
@@ -36,6 +41,13 @@ ReactDOM.render(
                     <Route path="/help" component={Help}/>
                     <Route path="/item" component={Item}/>
                     <Route path="/agreement" component={Agreement}/>
+                    <Route path="/register" component={Register}/>
+                    <Route path="/login" component={Login}/>
+                    <Route path="/search" component={Search}/>
+                    <Route path="/detail_server" component={Detail_server}/>
+                    <Route path="/detail_choose" component={Detail_choose}/>
+                    <Route path="/cartmore" component={CartMore}/>
+                    <Redirect path="*" to="/home"/>
                 </Switch>
             </App>
         </HashRouter>

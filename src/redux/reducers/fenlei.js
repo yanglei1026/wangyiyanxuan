@@ -1,13 +1,15 @@
 import * as Types from "../action-types";
-let initState= {
-   data : {}
-};
-function fenlei(state=initState, action) {
+
+function fenlei( state ={val:{
+    top_img:'',
+    title_name:'',
+    product_list:[]
+}}, action) {
     switch (action.type){
-        case Types.SET_FENLEI_DATA :{
-            return {data:action.payload}
+        case Types.CHANGETYPE: {
+            return {val:action.payload}
         }
     }
     return state;
 }
-export default  fenlei
+export default fenlei;

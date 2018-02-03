@@ -8,7 +8,7 @@ export default class Item extends  Component{
   render(){
       return (
           <div className="item-container">
-              <Link to={{pathname:"/home", state:{name:"yanglei"}}}>
+              <Link to={{pathname:"/detail", state:{name:"yanglei"}}}>
                   <img className="item-cover" src="http://yanxuan.nosdn.127.net/02da8bce2fa3a182d398f6a09e8ac2f5.png?imageView&quality=65&thumbnail=330x330"/>
                   <div className="item-title">【超强保温】升级版，316不锈钢</div>
                   <div className="item-bot">

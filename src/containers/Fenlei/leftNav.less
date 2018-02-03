@@ -1,0 +1,35 @@
+.fenleft{
+  width:20%;
+  height:15.1rem;
+  overflow: scroll;
+  &::-webkit-scrollbar {display:none};
+  ul{
+    width:1.80rem;
+    border-right:1px solid #dfdfe1;
+    li{
+      a{
+        position: relative;
+        width:100%;
+        margin-top: 0.5rem;
+        padding: 0.3rem 0;
+        font-size: .3rem;
+        color:#333;
+        text-align: center;
+        display: block;
+        &.active{
+          color:#ab2b2b;
+          font-size: .32rem;
+          &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: .2*14/75rem;
+            background-color: #ab2b2b;
+          }
+        }
+      }
+    }
+  }
+}
