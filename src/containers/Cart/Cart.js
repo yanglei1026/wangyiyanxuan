@@ -5,6 +5,10 @@ import {Link} from "react-router-dom";
 import CartMore from "./CartMore";
 
 export default class Cart extends Component {
+    constructor(){
+        super();
+        this.state={isSelected:false}
+    }
     handleClick=(cb)=>{
 
     }
@@ -22,7 +26,7 @@ export default class Cart extends Component {
                                <li>＊满88元免邮费</li>
                            </ul>
                        </div>
-
+                       {this.state.isSelected?<CartMore/>:""}
                        <div className="Cart-login">
                            <img src="../../../resource/images/cartbg.png" alt=""/>
                            <div className="Cart-title">去添加点什么吧</div>
