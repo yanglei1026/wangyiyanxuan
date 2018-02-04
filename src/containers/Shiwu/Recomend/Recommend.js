@@ -2,6 +2,7 @@ import React from 'react';
 import "./index.less"
 import author01 from './author1.jpg';
 import author02 from './author2.png';
+import {Link} from "react-router-dom"
 
 export default class Recommend extends React.Component {
     render(){
@@ -13,7 +14,7 @@ export default class Recommend extends React.Component {
                             为你推荐
                         </div>
                         {/*为你推荐 保暖*/}
-                        <a href="javascript:" className="mainItem">
+                        <Link to="/yanxuantuijian" className="mainItem">
                             <div className="mainPic">
                                 <div className="topicTag">
                                     <div className="exploreTag">
@@ -34,7 +35,7 @@ export default class Recommend extends React.Component {
                                     雪天必备好物
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                         {/*味道 时光机*/}
                         <a href="javascript:" className="minorItem">
                             <div className="topicInfo">

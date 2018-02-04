@@ -24,6 +24,8 @@ import Agreement from "./containers/Agreement/Agreement";
 import Invoice from "./containers/Invoice/Invoice";
 import Pay from "./containers/Pay/Pay";
 import Detail_comment from "./containers/Detail/Detail_comment";
+import Shidianyike from "./containers/Shiwu/Shidianyike/Shidianyike";
+import Yanxuantuijian from "./containers/Shiwu/Yanxuantuijian/Yanxuantuijian";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -49,6 +51,8 @@ ReactDOM.render(
                     <Route path="/detail_server" component={Detail_server}/>
                     <Route path="/detail_choose" component={Detail_choose}/>
                     <Route path="/detail_comment" component={Detail_comment}/>
+                    <Route path="/shidianyike" component={Shidianyike}/>
+                    <Route path="/yanxuantuijian" component={Yanxuantuijian}/>
                     <Redirect path="*" to="/home"/>
                 </Switch>
             </App>

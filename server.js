@@ -65,23 +65,26 @@ app.get("/home/:category", function (req, res) {
 // {username:"xx", password:"yy", id:1}
 app.post("/register", function (req, res) {
     let {username, password} = req.body;
-    // let list = users;
     let newUser = users.find(item => item.username === username);
 
     if (users.length === 0) {
         users.push({id: 1, username, password});
+        console.log("成功");
         res.json({err: 0, msg: "恭喜, 注册成功"});
+        return;
     } else {
         if (newUser.username !== undefined) {
             // 查找成功, 找到重名用户
+            console.log("失败");
             res.json({err: 1, msg: "用户名已存在, 请更换用户名重新注册"});
-            return
+            return;
         }
         newUser = {username, password, id: users[users.length - 1].id + 1}
-        user.push(newUser);
-        res.json({err: 0, msg: "恭喜您, 注册成功"})
+        users.push(newUser);
+        console.log("成功");
+        res.json({err: 0, msg: "恭喜您, 注册成功"});
+        return;
     }
-    return;
 });
 
 // 登录
@@ -95,20 +98,22 @@ app.post("/register", function (req, res) {
 
 app.post("/register", function (req, res) {
     let {username, password} = req.body;
-    let backUp_users = users;
+    console.log(username,password);
 
-    if (backUp_users.length){
+    if (!users.length){
         let id = 1;
         users.push({id, username, password});
         res.send({err:0, msg:"注册成功"})
-    } if(backUp_users.length>0){
+    } if(users.length>0){
         let result = users.find(item=>item.username===username);
         if (result.id === undefined){
             let id = users[users.length-1].id+1;
-            user.push({id,username, password});
+            users.push({id,username, password});
             res.send({err:0, msg:"注册成功"})
         } else {
             res.send({err:1, msg:"注册失败, 用户已存在"})
         }
     }
-})
+
+});
+

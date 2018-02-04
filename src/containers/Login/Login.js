@@ -7,7 +7,9 @@ export default class Login extends React.Component {
     handleClick=()=>{
         let username = this.x.value;
         let password = this.y.value;
-        console.log(username, password);
+        setTimeout(()=>{
+            this.props.history.push("/cartmore")
+        }, 500)
     }
 
     render() {

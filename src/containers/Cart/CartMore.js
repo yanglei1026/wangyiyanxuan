@@ -172,9 +172,9 @@ export default class Cart extends Component {
                     </div>
                     <div className="Cart-buy">
                         <div className="Cart-buy-left">
-                            <i checked={this.checkAll()} className="btnnn" onChange={
+                            <input type="checkbox"  checked={this.checkAll()} className="btnnn" onChange={
                                 this.changeall
-                            }></i>
+                            }></input>
                             <span> 已选({this.checked()})</span>
                             <span>¥{this.allMoney()}</span></div>
                         <div className="Cart-buy-right"><Link to="/address"><button>下单</button></Link></div>

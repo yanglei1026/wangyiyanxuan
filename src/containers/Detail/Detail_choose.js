@@ -138,8 +138,8 @@ export default class Choose extends Component{
                 </div>
                 <div className="choose_bottom clearfix">
                     <a className="go_prev"  onClick={(e)=>{this.go(e,'/Detail')}}>返回</a>
-                    <a className="go_buy"  onClick={(e)=>{this.go(e,'/Detail')}}>立即购买</a>
-                    <Link className="go_car on" to='/Detail'>加入购物车</Link>
+                    <a className="go_buy"  onClick={(e)=>{this.go(e,'/cart')}}>立即购买</a>
+                    <Link className="go_car on" to='/cart'>加入购物车</Link>
                 </div>
             </div>
         )

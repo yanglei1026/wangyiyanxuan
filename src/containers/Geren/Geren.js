@@ -10,7 +10,6 @@ export default class Geren extends Component {
                     {/*<span>{this.props.user.username}</span>*/}
                     <a href="">普通用户</a>
                 </div>
-
             <span className="my-order">我的订单</span>
             <ul className="order">
                 <li><i className="iconfont icon-qianbao"><span>待付款</span></i></li>

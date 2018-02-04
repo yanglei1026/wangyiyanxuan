@@ -10,7 +10,7 @@ export default class DetailHeader extends React.Component {
                 <img src={logo} alt=""/>
                 <div className="iconRight">
                     <Link to='/search' className="iconfont icon-fangdajing"></Link>
-                    <Link to='/cart' className="iconfont icon-gouwuche"></Link>
+                    <Link to='/cartmore' className="iconfont icon-gouwuche"></Link>
                 </div>
             </div>
         )

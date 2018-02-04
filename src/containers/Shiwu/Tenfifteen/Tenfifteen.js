@@ -2,6 +2,7 @@ import React from 'react';
 import Swiper from "swiper";
 import "../../../../node_modules/swiper/dist/css/swiper.min.css"
 import './index.less';
+import {Link} from "react-router-dom"
 
 export default class Tenfifteen extends React.Component {
     componentDidMount() {
@@ -23,7 +24,7 @@ export default class Tenfifteen extends React.Component {
 
                     <div className="swiper-container swiper-container-horizontal swiper-container-free-mode">
                         <div className="list swiper-wrapper">
-                            <a href="javascript:" className="item swiper-slide">
+                            <Link to="/shidianyike" className="item swiper-slide">
                                 <div className="line-title">一 今日话题 一</div>
                                 <div className="title">和喵星人的故事</div>
                                 <div className="desc">面包和猫都会有的</div>
@@ -40,7 +41,7 @@ export default class Tenfifteen extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                             <a href="javascript:" className="item swiper-slide">
                                 <div className="line-title">今日话题</div>
                                 <div className="title">你拍的雪景</div>
